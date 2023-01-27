@@ -16,22 +16,6 @@ class Answer {
     }
     return arrA;
   }
-
-  answer1(theme) {
-    return this.answer(theme)[0];
-  }
-
-  answer2(theme) {
-    return this.answer(theme)[1];
-  }
-
-  answer4(theme) {
-    return this.answer(theme)[2];
-  }
-
-  answer5(theme) {
-    return this.answer(theme)[3];
-  }
 }
-let a = new Answer();
-console.log(a.answer('otter'));
+
+module.exports = Answer;

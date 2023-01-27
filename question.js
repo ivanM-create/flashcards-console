@@ -1,5 +1,5 @@
-const fs = require("fs");
-const { EOL } = require("os");
+const fs = require('fs');
+const { EOL } = require('os');
 
 class Question {
   constructor(num) {
@@ -26,6 +26,6 @@ class Question {
   }
 }
 let q = new Question();
-console.log(q.question1("otter"));
+console.log(q.question1('otter'));
 
 // module.exports = Nighthawk;

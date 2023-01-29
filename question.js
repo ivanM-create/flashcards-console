@@ -7,10 +7,10 @@ class Question {
   }
 
   question(theme) {
-    let arr = fs
-      .readFileSync(`${__dirname}/topics/${theme}.txt`, `utf-8`)
+    const arr = fs
+      .readFileSync(`${__dirname}/topics/${theme}.txt`, 'utf-8')
       .split(EOL);
-    let arrQ = [];
+    const arrQ = [];
     for (let i = 0; i < arr.length; i += 3) {
       arrQ.push(arr[i]);
     }

@@ -2,20 +2,21 @@ const readlineSync = require('readline-sync');
 const Question = require('./question');
 const Answer = require('./answers');
 
-let q = new Question();
-let a = new Answer();
+const q = new Question();
+const a = new Answer();
 
-animals = ['Nighthawk', 'Otter', 'Raccoon'];
-index = readlineSync.keyInSelect(animals, 'Choose the topic');
+const thems = ['Nighthawk', 'Otter', 'Raccoon'];
+const index = readlineSync.keyInSelect(thems, 'Choose the topic');
 
 let count = 0;
-for (let i = 0; i < q.question(animals[index]).length; i += 1) {
-  r = readlineSync.keyInSelect(
-    a.answer(animals[index]),
-    q.question(animals[index])[i]
+for (let i = 0; i < q.question(thems[index]).length; i += 1) {
+  const r = readlineSync.keyInSelect(
+    a.answer(thems[index]),
+    // eslint-disable-next-line comma-dangle
+    q.question(thems[index])[i]
   );
   if (i === r) {
     count += 1;
   }
 }
-console.log(`Спасибо за игру 👍 !!! правиьных ответов: ${count}`);
+console.log(`Спасибо за игру 👍🐱!!! правильных ответов: ${count}`);
